@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div>
+          
+     </div>
+     <script>
+          var harga;
+          var nama_barang;
+          var ket="";
+          var jumlah=0;
+          var total=0;
+          var subtotal=0;
+      
+          function cek_barang (){
+              var nama = document.getElementById("listbarang").value;
+              switch (nama) {
+              case'Buku':
+                       harga=10000;
+                       nama_barang = "Buku";
+                       break;
+                  case'Tas':
+                       harga=50000;
+                       nama_barang = "Tas";
+                       break;
+                  case'Pensil':    
+                       harga=5000;
+                       nama_barang = "Pensil";
+                       break;
+                  case'Penghapu':
+                       harga=15000;
+                       nama_barang = "Penghapus";
+                      break;
+              };
+              jumlah=parseint (document.getElementById("listbarang"));
+              subtotal= jumlah*harga;
+              total= total+subtotal;
+              ket= ket+nama_barang+":"+harga+":"+jumlah+"="+subtotal+"<br>";
+              document.getElementById("barang").innerHTML =ket;
+              document.getElementById("total").innerHTML ="Total Belanja="+total;
+          }
+      </script>    
+</body>
+</html>
